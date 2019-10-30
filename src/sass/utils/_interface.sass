@@ -1,0 +1,76 @@
+html, body
+   height: 100%
+
+body
+   position: relative
+   min-width: 320px
+   font-family: $main-font
+   font-size: 16px
+   color: $text-color
+   background-color: bg-color
+   overflow-x: hidden
+
+.wrapper
+   width: calc(100% - 100px)
+   max-width: $wrapper
+   margin: 0 auto
+
+img
+   max-width: 100%
+   -webkit-user-select: none
+   -moz-user-select: -moz-none
+    /*IE10*/
+    -ms-user-select: none
+    user-select: none
+
+    /*Android and not desktop browsers*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+a
+   text-decoration: none
+   color: inherit
+
+.section
+   padding: 50px 0
+   &-title
+      margin-bottom: 40px
+      text-align: center
+      font-size: 30px
+
+.button
+   padding: 20px 45px
+   border: none
+   background-color: $accent
+   font-size: 15px
+   color: #ffffff
+   text-transform: uppercase
+   cursor: pointer
+   outline: none
+   transition: 0.3s
+   &:hover
+      background-color: darken($accent, 4%)
+   &:active
+      background-color: darken($accent, 7%)
+
+/*======================== MEDIA QUERIES ===============================*/
+
+
+@media (max-width: 1200px)
+   .section
+      padding: 40px 0
+      &-title
+         margin-bottom: 30px
+         font-size: 28px
+
+@media (max-width: 992px)
+   .section
+      padding: 30px 0
+      &-title
+         margin-bottom: 25px
+         font-size: 26px
+
+@media (max-width: 768px)
+   .section
+      padding: 20px 0
+      &-title
+         margin-bottom: 20px
+         font-size: 24px
